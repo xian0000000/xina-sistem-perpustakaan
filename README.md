@@ -89,9 +89,3 @@ perpustakaan/
 │   └── book/             # Book service (NestJS)
 └── frontend/             # Next.js frontend
 ```
-
-## ⚠️ Keamanan
-
-- **Jangan pernah commit file `.env`** — sudah di-ignore oleh `.gitignore`
-- Gunakan `.env.example` sebagai template
-- Ganti `JWT_SECRET` dengan string random yang panjang (min 32 karakter)
