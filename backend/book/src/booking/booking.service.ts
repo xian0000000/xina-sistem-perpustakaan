@@ -7,7 +7,7 @@ export const getBookSchedule = async (bookId: number) => {
   if (!book) throw new Error('Book not found');
   const bookings = await bookingRepo.findUpcomingBookingsByBookId(bookId);
   // Map ke format BookScheduleEntry yang diharapkan frontend
-  return bookings.map(b => ({
+  return bookings.map((b:any) => ({
     id: b.id,
     bookId: b.bookId,
     userId: b.userId,

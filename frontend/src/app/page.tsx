@@ -103,7 +103,7 @@ export default function Page() {
             Sistem Digital
           </p>
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(26px,5vw,38px)", fontWeight: 600, color: "var(--text-primary)", letterSpacing: "0.04em", marginBottom: 12 }}>
-            Perpustakaan Terput 2
+            Perpustakaan Xina
           </h1>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }}>
             <span style={{ height: 1, width: 40, background: "var(--border-med)" }} />
