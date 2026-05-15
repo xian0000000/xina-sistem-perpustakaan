@@ -2,7 +2,7 @@
 
 Sistem perpustakaan digital dengan tampilan interaktif — pengguna bisa klik langsung ke rak buku di layar untuk buka fitur-fiturnya.
 
-![Tampilan Utama](docs/screenshot-home.jpeg)
+![Tampilan Utama](docs/home.jpeg)
 
 ---
 
