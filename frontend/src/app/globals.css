@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Warm neutral palette */
+  --bg:         #faf7f2;
+  --bg-card:    #ffffff;
+  --bg-muted:   #f3ede3;
+  --border:     #e8ddd0;
+  --border-med: #d4c4b0;
+
+  --text-primary:   #2c1f12;
+  --text-secondary: #7a6555;
+  --text-muted:     #b0a090;
+
+  --accent:       #c07840;   /* warm amber */
+  --accent-light: #f5e6cc;
+  --accent-hover: #a8622e;
+
+  --green:   #5a8a6a;
+  --green-l: #eaf3ec;
+  --blue:    #4a7a9b;
+  --blue-l:  #e8f2f8;
+  --red:     #c05a4a;
+  --red-l:   #faecea;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar       { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-med); border-radius: 2px; }
+
+input:focus, textarea:focus, select:focus { outline: none; }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+  cursor: pointer;
+}

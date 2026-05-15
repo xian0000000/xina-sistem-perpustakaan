@@ -1,0 +1,16 @@
+# Environment variables - NEVER commit these
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Docker volumes (local data)
+data/

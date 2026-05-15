@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Book {
+  id          Int       @id @default(autoincrement())
+  title       String
+  author      String
+  description String?
+  coverUrl    String?
+  genre       String?
+  status      String    @default("ready")
+  readBy      Int?
+  readSince   DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  chapters    Chapter[]
+  bookings    Booking[]
+}
+
+model Chapter {
+  id            Int      @id @default(autoincrement())
+  bookId        Int
+  title         String
+  chapterNumber Int
+  content       String   @default("")
+  pdfUrl        String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  book          Book     @relation(fields: [bookId], references: [id], onDelete: Cascade)
+
+  @@unique([bookId, chapterNumber])
+}
+
+model Booking {
+  id          Int      @id @default(autoincrement())
+  bookId      Int
+  userId      Int
+  userName    String   @default("")
+  bookedFrom  DateTime
+  bookedUntil DateTime
+  status      String   @default("waiting")
+  createdAt   DateTime @default(now())
+  book        Book     @relation(fields: [bookId], references: [id], onDelete: Cascade)
+}
