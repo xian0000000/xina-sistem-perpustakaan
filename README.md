@@ -24,8 +24,8 @@ Sistem manajemen perpustakaan digital dengan arsitektur microservices.
 ### 1. Clone repo
 
 ```bash
-git clone https://github.com/<username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/xian0000000/xina-sistem-perpustakaan.git
+cd xina-sistem-perpustakaan
 ```
 
 ### 2. Setup environment variables
